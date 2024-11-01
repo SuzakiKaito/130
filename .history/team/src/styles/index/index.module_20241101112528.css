@@ -1,0 +1,119 @@
+.content{
+  width: 393px;
+  height: 852px;
+  background:linear-gradient(#212559, #250E79);
+  color: #fff;
+  /* position: relative; */
+  /* z-index: -5; */
+
+}
+
+/* header{
+
+} */
+
+.mainContent{
+  width: 100%;
+  height: 600px;
+  padding-top: 50px;
+  /* position:relative; */
+}
+
+.mainContent h2{
+  text-align: center;
+  font-size: 20px;
+}
+
+.dataContent{
+  width: 350px;
+  height: 330px;
+  /* border :1px solid tomato; */
+  margin: 0 0 0 -20px;
+  position: relative;
+}
+
+.dataContent figure{
+  width: 350px;
+  height: 330px;
+  position: fixed;
+}
+.dataContent figure img{
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  /* position: fixed; */
+  z-index: 2;
+}
+.achievement{
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translate(25%, -30%);
+  /* -webkit-transform: translate(-50%, -50%); */
+  /* -ms-transform: translate(-50%, -50%); */
+  width: 70px;
+  height: 70px;
+  
+}
+
+.achievement h4{
+  font-size: 14px;
+}
+.achievementNumber{
+  font-size: 20px;
+  margin-top: -20px;
+}
+
+.concentration{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-36.7%, -75%);
+  width: 300px;
+  height: 90px;
+  border-radius: 10px;
+  background: linear-gradient(#85ABD3,#FFFFFF);
+  border: solid 2px #fff;
+}
+
+.concentration h3{
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+  color: #000;
+}
+
+.concentration figure{
+  width: 260px;
+  height: 40px;
+}
+
+.concentration figure img{
+  width: 100%;
+  height: 100%;
+
+}
+/* .rectangle{
+  position: relative;
+  width: 350px;
+  height: 230px;
+  background: #254581;
+  border: #fff 1px solid;
+  border-radius: 10px;
+
+}
+.rectangle::before{
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -50px;           
+  left: 50%;
+  transform: translate(-50%, -10%);
+  width: 120px;
+  height: 120px;
+  background: #254581;
+  border-left: #fff 1px solid;
+  border-top: #fff 1px solid;
+  border-radius: 50% ;
+} 
+ */

@@ -24,28 +24,8 @@ export default function home(){
               <img src="/images/stars.png" alt="" />
             </figure>
           </div>
-          <div className={styles.flexBox}>
-            <div className={styles.studyTime}>
-              <h4>今日の勉強時間</h4>
-              <h3>5.5h</h3>
-            </div>
-            <div className={styles.flex}>
-              <div className={styles.goalTime}>
-                <h4>今日の目標勉強時間</h4>
-                <h3>7.0h</h3>
-              </div>
-              <button>入力</button>
-            </div>
-          </div>
         </div>
       </main>
-      <footer className={styles.footer}>
-        <div className={styles.buttons}>
-          <button className={styles.home}>ホーム</button>
-          <button className={styles.ranking}>ランキング</button>
-          <button className={styles.setting}>設定</button>
-        </div>
-      </footer>
     </div>
     </>
   )

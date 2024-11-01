@@ -40,11 +40,9 @@ export default function home(){
         </div>
       </main>
       <footer className={styles.footer}>
-        <div className={styles.buttons}>
-          <button className={styles.home}>ホーム</button>
-          <button className={styles.ranking}>ランキング</button>
-          <button className={styles.setting}>設定</button>
-        </div>
+        <button className={styles.home}>ホーム</button>
+        <button className={styles.ranking}>ランキング</button>
+        <button className={styles.setting}>設定</button>
       </footer>
     </div>
     </>

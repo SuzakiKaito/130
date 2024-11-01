@@ -1,0 +1,22 @@
+.content{
+  width: 393px;
+  height: 852px;
+  background:linear-gradient(#212559, #250E79);
+  color: #fff;
+}
+
+/* header{
+
+} */
+
+.mainContent{
+  width: 100%;
+  height: 600px;
+  border :1px solid tomato;
+  padding-top: 50px;
+}
+
+.mainContent h2{
+  text-align: center;
+  
+}
