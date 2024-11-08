@@ -44,8 +44,8 @@
 }
 
 .timerContent{
-  width: 280px;
-  height: 280px ;
+  width: 300px;
+  height: 300px ;
   margin: 20px auto 0;
   /* background: saddlebrown; */
   border-radius: 50%;
@@ -70,26 +70,20 @@
 .studyTime{
   color: rgba(33, 37, 89, 1);
   margin: 50px auto 0;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 .rest{
   color: rgba(33, 37, 89, 1);
   margin: 5px auto;
-  font-size: 1rem;
-
 }
 
 
-.min,.sec,.micro,.colon{
+.min,.sec,.micro{
   width: 70px;
   font-size: 2.5rem;
+  
   text-align: center;
   display: inline-block;
-  color:  rgba(33, 37, 89, 1);
-}
-.colon{
-  width: 20px;
-  font-size: 2rem;
 }
 .timerFlex{
   width: 100%;
@@ -106,14 +100,14 @@
 }
 
 .start,.stop,.reset{
-  width: 130px;
-  height: 40px;
+  width: 100px;
+  height: 30px;
   background: white;
   color: #212559;
   box-shadow: none !important;
+  border: 2px solid #212559;
   min-width: 6%;
-  background: rgba(0, 68, 255, 1);
-  border: 2px solid #fff;
+  /* padding: 5px; */
   border-radius: 50px;
   font-family: MONOSPACE;
   font-size: 18px;

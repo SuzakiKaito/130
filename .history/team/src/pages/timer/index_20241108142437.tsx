@@ -42,20 +42,13 @@ export default function timer(){
       <div className={styles.content}>
         <p className={styles.timer}>タイマー </p>
         <div className={styles.stars}>
-          <figure><img src="/images/star.svg" alt="星" /></figure>
-          <figure><img src="/images/star.svg" alt="星" /></figure>
-          <figure><img src="/images/star.svg" alt="星" /></figure>
-          <figure><img src="/images/star.svg" alt="星" /></figure>
-          <figure><img src="/images/star.svg" alt="星" /></figure>
+          <figure><img src="/images/star.svg" alt="" /></figure>
+          <figure><img src="" alt="" /></figure>
+          <figure><img src="" alt="" /></figure>
+          <figure><img src="" alt="" /></figure>
+          <figure><img src="" alt="" /></figure>
         </div>
-        <p className={styles.setName}><span>3</span>セット目</p>
-        <div className={styles.timerContent}>
-          <div className={styles.timerCircle}>
-            <p className={styles.studyTime}>勉強時間</p>
-            <p className={styles.rest}>残り</p>
-	          <p className={styles.timerFlex}> <span className={styles.min}>{minutes}</span><span className={styles.colon}>:</span><span className={styles.sec}>{seconds}</span></p>
-          </div>
-        </div>
+	      <p className={styles.timerFlex}> <span className={styles.min}>{minutes}</span>.<span className={styles.sec}>{seconds}</span>.<span className={styles.micro}>{milliseconds}</span></p>
         <div className={styles.flex}>
 	        <button className={styles.start} onClick={handleStart}> Start </button>
 	        <button className={styles.stop} onClick={handleStop}> Stop </button>

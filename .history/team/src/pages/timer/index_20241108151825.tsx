@@ -53,7 +53,7 @@ export default function timer(){
           <div className={styles.timerCircle}>
             <p className={styles.studyTime}>勉強時間</p>
             <p className={styles.rest}>残り</p>
-	          <p className={styles.timerFlex}> <span className={styles.min}>{minutes}</span><span className={styles.colon}>:</span><span className={styles.sec}>{seconds}</span></p>
+	          <p className={styles.timerFlex}> <span className={styles.min}>{minutes}</span><span className={styles.colon}>：</span><span className={styles.sec}>{seconds}</span></p>
           </div>
         </div>
         <div className={styles.flex}>
