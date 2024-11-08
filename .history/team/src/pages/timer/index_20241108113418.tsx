@@ -4,27 +4,19 @@ import styles from '@/styles/timer/index.module.css'
 export default function timer(){
   const [time, setTime] = useState(0); // タイマーの経過時間（ミリ秒単位）を保持する状態変数
   const [isRunning, setIsRunning] = useState(false); // タイマーが動作中かどうかを保持する状態変数
-  const maxTime = 60000; //30分になるとタイマーが止まる
-  
-  // 音声ファイルのロード
-  // const audio = new Audio('/audio/Clock-Alarm03-01(Mid-Loop).mp3');
+  const maxTime = 120000; 
 
   useEffect(() => {
     if (isRunning) {
+      // タイマーが動作中ならintervalを開始
       const intervalId = setInterval(() => {
-        setTime(prevTime => {
-          if (prevTime >= maxTime) {
-            setIsRunning(false); // 2分に到達したら停止
-            // audio.play(); // タイマーが終了したら音を鳴らす
-            return prevTime; // タイマーの時間をそのまま維持
-          }
-          return prevTime + 10; // 10ミリ秒ごとに経過時間を更新
-        });
+        setTime(prevTime => prevTime + 10); // 10ミリ秒ごとに経過時間を更新
       }, 10);
 
+      // タイマー停止またはコンポーネントのアンマウント時にintervalをクリア
       return () => clearInterval(intervalId);
     }
-  }, [isRunning, maxTime]);
+  }, [isRunning]); // isRunningが変化するたびにuseEffectが実行される
 
   const minutes = String(Math.floor(time / 60000)).padStart(2, '0'); // 分数を計算し、2桁の文字列に変換
   const seconds = String(Math.floor((time % 60000) / 1000)).padStart(2, '0'); // 秒数を計算し、2桁の文字列に変換
@@ -32,10 +24,6 @@ export default function timer(){
 
   const handleStart = () => setIsRunning(true);
   const handleStop = () => setIsRunning(false);
-  const handleReset = () => {
-    setIsRunning(false);
-    setTime(0);
-  };
 
   return (
     <>
@@ -45,7 +33,6 @@ export default function timer(){
         <div className={styles.flex}>
 	        <button className={styles.start} onClick={handleStart}> Start </button>
 	        <button className={styles.stop} onClick={handleStop}> Stop </button>
-          <button className={styles.reset} onClick={handleReset}>Reset</button>
 	        {/* <button className={styles.restart}> Restart </button> */}
         </div>
       </div>

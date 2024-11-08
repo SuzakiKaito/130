@@ -4,10 +4,10 @@ import styles from '@/styles/timer/index.module.css'
 export default function timer(){
   const [time, setTime] = useState(0); // タイマーの経過時間（ミリ秒単位）を保持する状態変数
   const [isRunning, setIsRunning] = useState(false); // タイマーが動作中かどうかを保持する状態変数
-  const maxTime = 60000; //30分になるとタイマーが止まる
+  const maxTime = 120000; //30分になるとタイマーが止まる
   
   // 音声ファイルのロード
-  // const audio = new Audio('/audio/Clock-Alarm03-01(Mid-Loop).mp3');
+  const audio = new Audio('/audio/Clock-Alarm03-01(Mid-Loop).mp3');
 
   useEffect(() => {
     if (isRunning) {
@@ -15,7 +15,7 @@ export default function timer(){
         setTime(prevTime => {
           if (prevTime >= maxTime) {
             setIsRunning(false); // 2分に到達したら停止
-            // audio.play(); // タイマーが終了したら音を鳴らす
+            audio.play(); // タイマーが終了したら音を鳴らす
             return prevTime; // タイマーの時間をそのまま維持
           }
           return prevTime + 10; // 10ミリ秒ごとに経過時間を更新
@@ -32,10 +32,6 @@ export default function timer(){
 
   const handleStart = () => setIsRunning(true);
   const handleStop = () => setIsRunning(false);
-  const handleReset = () => {
-    setIsRunning(false);
-    setTime(0);
-  };
 
   return (
     <>
@@ -45,7 +41,6 @@ export default function timer(){
         <div className={styles.flex}>
 	        <button className={styles.start} onClick={handleStart}> Start </button>
 	        <button className={styles.stop} onClick={handleStop}> Stop </button>
-          <button className={styles.reset} onClick={handleReset}>Reset</button>
 	        {/* <button className={styles.restart}> Restart </button> */}
         </div>
       </div>

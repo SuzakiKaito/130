@@ -45,7 +45,7 @@ export default function timer(){
         <div className={styles.flex}>
 	        <button className={styles.start} onClick={handleStart}> Start </button>
 	        <button className={styles.stop} onClick={handleStop}> Stop </button>
-          <button className={styles.reset} onClick={handleReset}>Reset</button>
+          
 	        {/* <button className={styles.restart}> Restart </button> */}
         </div>
       </div>
