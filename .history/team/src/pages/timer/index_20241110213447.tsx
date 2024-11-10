@@ -36,9 +36,12 @@ export default function timer(){
     }
   }, [isActive, minutes, seconds]); // isActive, minutes, secondsが変わるたびに実行
 
+  // スタートボタンの動作：タイマーをアクティブ状態にする
   const handleStart = () => {
     setIsActive(true);
   };
+
+  // ストップボタンの動作：タイマーを停止状態にする
   const handleStop = () => {
     setIsActive(false);
   };
@@ -60,7 +63,7 @@ export default function timer(){
           <div className={styles.timerCircle}>
             <p className={styles.studyTime}>勉強時間</p>
             <p className={styles.rest}>残り</p>
-	          <p className={styles.timerFlex}> <span className={styles.min}>{String(minutes).padStart(2, '0')}</span><span className={styles.colon}>:</span><span className={styles.sec}>{String(seconds).padStart(2, '0')}</span></p>
+	          <p className={styles.timerFlex}> <span className={styles.min}>00</span><span className={styles.colon}>:</span><span className={styles.sec}>00</span></p>
           </div>
         </div>
         <div className={styles.buttonFlex}>
