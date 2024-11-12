@@ -53,15 +53,6 @@
   border: 10px solid rgba(255, 255, 255, 0.8);
 }
 
-.timerContent::before{
-  content: "";
-  position: absolute;
-  top: 0;
-  
-
-}
-
-
 .timerCircle{
   width: 260px;
   height: 260px;

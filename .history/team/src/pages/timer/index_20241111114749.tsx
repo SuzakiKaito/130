@@ -71,9 +71,9 @@ export default function timer(){
           </div>
         <footer className={styles.footerContent}>
           <div className={styles.iconContent}>
-            <figure className={styles.timeIcon}><img src="/images/timeIcon.png" alt="タイマーアイコン" /></figure>
-            <figure className={styles.homeIcon}><img src="/images/homeIcon.png" alt="ホームアイコン" /></figure>
-            <figure className={styles.crownIcon}><img src="/images/crownIcon.png" alt="ランキングアイコン" /></figure>
+            <figure><img src="/images/timeIcon.png" alt="タイマーアイコン" /></figure>
+            <figure><img src="/images/homeIcon.pn" alt="ホームアイコン" /></figure>
+            <figure><img src="/images/crownIcon.pn" alt="ランキングアイコン" /></figure>
           </div>
         </footer>
         </div>

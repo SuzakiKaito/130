@@ -70,11 +70,7 @@ export default function timer(){
             {/* <button className={styles.restart}> Restart </button> */}
           </div>
         <footer className={styles.footerContent}>
-          <div className={styles.iconContent}>
-            <figure className={styles.timeIcon}><img src="/images/timeIcon.png" alt="タイマーアイコン" /></figure>
-            <figure className={styles.homeIcon}><img src="/images/homeIcon.png" alt="ホームアイコン" /></figure>
-            <figure className={styles.crownIcon}><img src="/images/crownIcon.png" alt="ランキングアイコン" /></figure>
-          </div>
+
         </footer>
         </div>
       </div>
