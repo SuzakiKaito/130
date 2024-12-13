@@ -156,7 +156,7 @@
   height: 375px;
   position: fixed;
   top: 50%;
-  left: 21.4%;
+  left: 12.5%;
   transform: translate(-50%, -50%);
   background: linear-gradient(307.73deg, rgba(255, 255, 255, 0.8) 1.75%, #85ABD3 98.25%);
   border-radius: 20px;
@@ -218,7 +218,7 @@
   box-shadow: #16253F  0px 0px 100px 0px;
   background: #16253F;
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   z-index: 1;
@@ -231,9 +231,6 @@
   justify-content: space-around;
   align-items: center;
   /* background: tomato; */
-}
-.footerIcon figure{
-  cursor: pointer;
 }
 .timerIcon{
   display: flex;
@@ -253,12 +250,11 @@
   justify-content: center;
   align-items: center;
 }
-.timerImg{
-  width: 45px;
-  height: 45px;
-}
+/* .footerImage img{
+  margin:0 auto ;
+} */
 
-.textTimer{
-  margin: 5px 0 20px 0;
+.textRank{
+  margin: 0 0 20px 0;
 }
 

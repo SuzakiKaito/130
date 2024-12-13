@@ -226,25 +226,6 @@ export default function myPage() {
             </div>
           </a>
         </div>
-        <footer className={styles.footerContent}>
-            <div className={styles.footerCircle}></div>
-            <div className={styles.footerBox}>
-              <div className={styles.footerIcon}>
-                <div className={styles.homeIcon}>
-                  <figure className={styles.footerImage}>
-                    <a href="/myPage"><img src="/images/homeIcon_large.png" alt="ホームアイコン" /></a>
-                  </figure>
-                  <h4 className={styles.textHome}>ホーム</h4>
-                </div>
-                <figure className={styles.footerImage}>
-                  <a href="/timer"><img className={styles.timerImg} src="/images/timerIcon.png" alt="タイマーアイコン" /></a>
-                </figure>
-                <figure className={styles.footerImage}>
-                  <img src="/images/crownIcon.png" alt="ランキングアイコン" className={styles.crownIcon} />
-                </figure>
-              </div>
-            </div>
-          </footer>
       </div>
     </>
   );

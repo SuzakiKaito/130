@@ -15,33 +15,7 @@ export default function Timer(): JSX.Element {
   const timeLeft = minutes * 60 + seconds;
   const progress = ((totalTime - timeLeft) / totalTime) * 100;
 
-  useEffect(() => {
-    if (isActive) {
-      const intervalId = setInterval(() => {
-        if (seconds > 0) {
-          setSeconds((prev) => prev - 1);
-        } else if (minutes > 0 && seconds === 0) {
-          setMinutes((prev) => prev - 1);
-          setSeconds(59);
-        } else {
-          if (isOneMinuteCycle) {
-            setOneMinuteCount((prevCount) => prevCount + 1);
-            if (oneMinuteCount + 1 === 2) {
-              setStarColor("yellow");
-            }
-            setMinutes(0);
-            setSeconds(30);
-          } else {
-            setMinutes(1);
-            setSeconds(0);
-          }
-          setIsOneMinuteCycle(!isOneMinuteCycle);
-          setSetCount((prevCount) => prevCount + 1); // 追加: セット数を更新
-        }
-      }, 1000);
-      return () => clearInterval(intervalId);
-    }
-  }, [isActive, minutes, seconds, isOneMinuteCycle, oneMinuteCount]);
+  
 
   const handleToggle = (): void => {
     setIsActive(!isActive); // 状態を切り替える
@@ -115,17 +89,17 @@ export default function Timer(): JSX.Element {
             <div className={styles.footerBox}>
               <div className={styles.footerIcon}>
                 <figure className={styles.footerImage}>
-                  <a href="/myPage"><img src="/images/homeIcon.png" alt="ホームアイコン" /></a>
+                  <img src="/images/homeIcon.png" alt="ホームアイコン" />
                 </figure>
-                <div className={styles.timerIcon}>
-                  <figure className={styles.footerImage}>
-                    <img className={styles.timerImg} src="/images/timerIcon_large.png" alt="タイマーアイコン" />
-                  </figure>
-                  <h4 className={styles.textTimer}>タイマー</h4>
-                </div>
+                <figure className={styles.footerImage}>
+                  <img src="/images/timerIcon.png" alt="タイマーアイコン" />
+                </figure>
+                <div className={styles.crownIcon}>
                   <figure className={styles.footerImage}>
                     <img src="/images/crownIcon.png" alt="ランキングアイコン" className={styles.crownIcon} />
                   </figure>
+                  <h4 className={styles.textRank}>ランキング</h4>
+                </div>
               </div>
             </div>
           </footer>

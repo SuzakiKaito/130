@@ -7,7 +7,7 @@
   background: linear-gradient(180deg, #212559, #013FAB);
 }
 .header {
-  height: 35px;
+  height: 70px;
 }
 .myPage {
   text-align: center;
@@ -147,8 +147,8 @@
 .decreaseButton,
 .increaseButton {
   font-size: 20px;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   color: #013FAB;
   background: none;
   border: none;
@@ -157,13 +157,11 @@
   /* bottom: ; */
 }
 .decreaseButton{
-  /* font-size: 25px; */
+  font-size: 25px;
   border-right: dotted 2px #212559 ;
-  margin-left: 5px;
 }
 .increaseButton{
   border-left: dotted 2px #212559 ;
-  margin-right: 5px;
 
 }
 .goalNumber {
@@ -257,74 +255,3 @@
   align-items: center;
   cursor: pointer;
 }
-.footerContent{
-  width: 100%;
-  height: 120px;
-  margin:0;
-  position: relative;
-}
-.footerBox{
-  width: 100%;
-  height: 75px;
-  background: #16253F;
-  position: absolute; 
-  bottom: 0;
-  z-index: 2;
-  border-radius: 50px 50px 0 0;
-  box-shadow: #16253F  0px 0px 100px 0px;
-}
-.footerCircle{
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  box-shadow: #16253F  0px 0px 100px 0px;
-  background: #16253F;
-  position: absolute;
-  top: 45%;
-  left: 22%;
-  transform: translate(-50%,-50%);
-  z-index: 1;
-}
-.footerIcon{
-  width: 85%;
-  height: 75px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  /* background: tomato; */
-}
-.footerIcon figure{
-  cursor: pointer;
-}
-.homeIcon{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: column;
-  margin-bottom:5px;
-  /* position: absolute;
-  z-index: 2;
-  right: 10%; */
-}
-.footerImage{
-  margin: 0;
-  /* padding-bottom:10px ; */
-  width: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.footerImage a{
-  width: 50px;
-  height: 50px;
-}
-.Img{
-  width: 45px;
-  height: 45px;
-}
-
-.textHome{
-  margin: 0 0 20px 0;
-}
-

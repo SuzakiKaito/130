@@ -234,10 +234,10 @@ export default function myPage() {
                   <figure className={styles.footerImage}>
                     <a href="/myPage"><img src="/images/homeIcon_large.png" alt="ホームアイコン" /></a>
                   </figure>
-                  <h4 className={styles.textHome}>ホーム</h4>
+                  <h4 className={styles.textTimer}>ホーム</h4>
                 </div>
                 <figure className={styles.footerImage}>
-                  <a href="/timer"><img className={styles.timerImg} src="/images/timerIcon.png" alt="タイマーアイコン" /></a>
+                  <img className={styles.timerImg} src="/images/timerIcon_large.png" alt="タイマーアイコン" />
                 </figure>
                 <figure className={styles.footerImage}>
                   <img src="/images/crownIcon.png" alt="ランキングアイコン" className={styles.crownIcon} />

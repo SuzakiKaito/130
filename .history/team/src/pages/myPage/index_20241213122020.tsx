@@ -237,7 +237,7 @@ export default function myPage() {
                   <h4 className={styles.textHome}>ホーム</h4>
                 </div>
                 <figure className={styles.footerImage}>
-                  <a href="/timer"><img className={styles.timerImg} src="/images/timerIcon.png" alt="タイマーアイコン" /></a>
+                  <img className={styles.timerImg} src="/images/timerIcon.png" alt="タイマーアイコン" />
                 </figure>
                 <figure className={styles.footerImage}>
                   <img src="/images/crownIcon.png" alt="ランキングアイコン" className={styles.crownIcon} />

@@ -115,13 +115,13 @@ export default function Timer(): JSX.Element {
             <div className={styles.footerBox}>
               <div className={styles.footerIcon}>
                 <figure className={styles.footerImage}>
-                  <a href="/myPage"><img src="/images/homeIcon.png" alt="ホームアイコン" /></a>
+                  <img src="/images/homeIcon.png" alt="ホームアイコン" />
                 </figure>
                 <div className={styles.timerIcon}>
                   <figure className={styles.footerImage}>
-                    <img className={styles.timerImg} src="/images/timerIcon_large.png" alt="タイマーアイコン" />
+                    <img src="/images/timerIcon.png" alt="タイマーアイコン" />
                   </figure>
-                  <h4 className={styles.textTimer}>タイマー</h4>
+                  <h4 className={styles.textRank}>タイマー</h4>
                 </div>
                   <figure className={styles.footerImage}>
                     <img src="/images/crownIcon.png" alt="ランキングアイコン" className={styles.crownIcon} />

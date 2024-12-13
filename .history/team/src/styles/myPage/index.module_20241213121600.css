@@ -7,7 +7,7 @@
   background: linear-gradient(180deg, #212559, #013FAB);
 }
 .header {
-  height: 35px;
+  height: 70px;
 }
 .myPage {
   text-align: center;
@@ -280,8 +280,8 @@
   box-shadow: #16253F  0px 0px 100px 0px;
   background: #16253F;
   position: absolute;
-  top: 45%;
-  left: 22%;
+  top: 60%;
+  left: 50%;
   transform: translate(-50%,-50%);
   z-index: 1;
 }
@@ -297,7 +297,7 @@
 .footerIcon figure{
   cursor: pointer;
 }
-.homeIcon{
+.timerIcon{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -315,16 +315,12 @@
   justify-content: center;
   align-items: center;
 }
-.footerImage a{
-  width: 50px;
-  height: 50px;
-}
-.Img{
+.timerImg{
   width: 45px;
   height: 45px;
 }
 
-.textHome{
-  margin: 0 0 20px 0;
+.textTimer{
+  margin: 5px 0 20px 0;
 }
 
