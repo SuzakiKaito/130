@@ -8,8 +8,8 @@ export default function Timer(): JSX.Element {
   const [isOneMinuteCycle, setIsOneMinuteCycle] = useState<boolean>(true);
   const [oneMinuteCount, setOneMinuteCount] = useState<number>(0);
   const [starColor, setStarColor] = useState<string>("gray");
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false); // モーダルの状態を管理
-  const [setCount, setSetCount] = useState<number>(1); // 追加: セット数を管理する状態
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [setCount, setSetCount] = useState<number>(1);
 
   const totalTime = isOneMinuteCycle ? 60 : 30;
   const timeLeft = minutes * 60 + seconds;
@@ -36,7 +36,7 @@ export default function Timer(): JSX.Element {
             setSeconds(0);
           }
           setIsOneMinuteCycle(!isOneMinuteCycle);
-          setSetCount((prevCount) => prevCount + 1); // 追加: セット数を更新
+          setSetCount((prevCount) => prevCount + 1);
         }
       }, 1000);
       return () => clearInterval(intervalId);
@@ -44,11 +44,22 @@ export default function Timer(): JSX.Element {
   }, [isActive, minutes, seconds, isOneMinuteCycle, oneMinuteCount]);
 
   const handleToggle = (): void => {
-    setIsActive(!isActive); // 状態を切り替える
+    setIsActive(!isActive);
   };
 
   const toggleModal = (): void => {
-    setIsModalOpen(!isModalOpen); // モーダルの表示状態を切り替える
+    setIsModalOpen(!isModalOpen);
+  };
+
+  // 星の色を決定する関数
+  const getStarColors = () => {
+    const colors = ['gray', 'gray', 'gray', 'gray', 'gray'];
+    if (setCount >= 3) colors[0] = 'yellow';
+    if (setCount >= 7) colors[1] = 'yellow';
+    if (setCount >= 11) colors[2] = 'yellow';
+    if (setCount >= 15) colors[3] = 'yellow';
+    if (setCount >= 19) colors[4] = 'yellow';
+    return colors;
   };
 
   return (
@@ -57,13 +68,23 @@ export default function Timer(): JSX.Element {
         <div className={styles.content}>
           <p className={styles.timer}>タイマー</p>
           <div className={styles.stars}>
-            <figure><img src="/images/star.svg" alt="星" /></figure>
-            <figure><img src="/images/star.svg" alt="星" /></figure>
-            <figure><img src="/images/star.svg" alt="星" /></figure>
-            <figure><img src="/images/star.svg" alt="星" /></figure>
-            <figure><img src="/images/star.svg" alt="星" /></figure>
+            {getStarColors().map((color, index) => (
+              <svg
+                key={index}
+                width="40"
+                height="40"
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polygon
+                  points="50,10 61,38 90,38 67,59 76,88 50,70 24,88 33,59 10,38 39,38"
+                  fill={color}
+                  stroke="#ffffff"
+                  strokeWidth="5"
+                />
+              </svg>
+            ))}
           </div>
-          {/* セット数の表示 */}
           <p className={styles.setName}><span>{setCount}</span>セット目</p>
           <div className={styles.timerContent}>
             <div
@@ -100,13 +121,35 @@ export default function Timer(): JSX.Element {
             </button>
             {isModalOpen && (
               <div className={styles.modalContent}>
-                <h4>メッセージ</h4>
-                <div className={styles.messageContent}>
-                  <p>今日は目標回数よりも多い回数の12セットも勉強できていて凄いです！<br/><br/>
-
-                    明日もこの調子で頑張っていきましょう！</p>
+                <div className={styles.modalIcon}>
+                  <div className={styles.modalCircle}>
+                    <figure>
+                      {setCount === 1 && (
+                        <img src="/images/drop.png" alt="水滴の画像" />
+                      )}
+                      {setCount >= 2 && setCount <= 3 && (
+                        <img src="/images/star.png" alt="星の画像" />
+                      )}
+                      {setCount >= 4 && (
+                        <img src="/images/heart.png" alt="ハートの画像" />
+                      )}
+                    </figure>
+                  </div>
                 </div>
-                <button onClick={toggleModal}>戻る</button>
+                <h4>
+                  {setCount === 1 && "もう少し"}
+                  {setCount >= 2 && setCount <= 2 && "その調子!!!"}
+                  {setCount >= 3 && "素晴らしい!!!"}
+                </h4>
+                <div className={styles.messageContent}>
+                  <p>
+                    今日は目標回数よりも多い回数の12セットも勉強できていて凄いです!
+                    <br/>
+                    <br/>
+                    明日もこの調子で頑張っていきましょう！
+                  </p>
+                </div>
+                <button onClick={toggleModal}>OK</button>
               </div>
             )}
           </div>
@@ -123,9 +166,9 @@ export default function Timer(): JSX.Element {
                   </figure>
                   <h4 className={styles.textTimer}>タイマー</h4>
                 </div>
-                  <figure className={styles.footerImage}>
-                    <img src="/images/crownIcon.png" alt="ランキングアイコン" className={styles.crownIcon} />
-                  </figure>
+                <figure className={styles.footerImage}>
+                  <img src="/images/crownIcon.png" alt="ランキングアイコン" className={styles.crownIcon} />
+                </figure>
               </div>
             </div>
           </footer>
