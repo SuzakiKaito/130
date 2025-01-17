@@ -167,7 +167,7 @@ export default function Timer(): JSX.Element {
                   <h4 className={styles.textTimer}>タイマー</h4>
                 </div>
                 <figure className={styles.footerImage}>
-                  <img src="/images/crownIcon.png" alt="ランキングアイコン" className={styles.crownIcon} />
+                  <a href="/rank"><img src="/images/crownIcon.png" alt="ランキングアイコン" className={styles.crownIcon} /></a>
                 </figure>
               </div>
             </div>

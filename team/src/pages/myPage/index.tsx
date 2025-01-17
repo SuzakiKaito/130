@@ -236,7 +236,7 @@ export default function myPage() {
                   <a href="/timer"><img className={styles.timerImg} src="/images/timerIcon.png" alt="タイマーアイコン" /></a>
                 </figure>
                 <figure className={styles.footerImage}>
-                  <img src="/images/crownIcon.png" alt="ランキングアイコン" className={styles.crownIcon} />
+                  <a href="/rank"><img src="/images/crownIcon.png" alt="ランキングアイコン" className={styles.crownIcon} /></a>
                 </figure>
               </div>
             </div>
