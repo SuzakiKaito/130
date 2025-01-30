@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React from "react";
 import styles from "@/styles/rank/index.module.css";
 // 矢印
 import { TbArrowBadgeRightFilled } from "react-icons/tb";
@@ -11,17 +11,7 @@ import { FaRegStar } from "react-icons/fa";
 import { CgSandClock } from "react-icons/cg";
 import { PiClockCountdownBold } from "react-icons/pi";
 // className={styles.}
-
-
 export default function ranking() {
-  
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-
-  const toggleModal = (): void => {
-    setIsModalOpen(!isModalOpen);
-  };
-
-
   return (
     <>
       <div className={styles.content}>
@@ -135,7 +125,7 @@ export default function ranking() {
             </div>
             {/* 詳細 */}
             <div className={styles.detailContent}>
-              <button className={styles.detail} onClick={toggleModal}>詳細</button>
+              <button className={styles.detail}>詳細</button>
               <div className={styles.timeContent}>
                 <p className={styles.time}>14回</p>
                 <div className={styles.sandglass}>
@@ -148,40 +138,38 @@ export default function ranking() {
                   <PiClockCountdownBold />
                 </div>
               </div>
-              {isModalOpen && (
-                <div className={styles.modalContent}>
-                  <div className={styles.countAverage}>
-                    <p>過去1週間の平均セット回数</p>
-                    <div className={styles.averageTime}>
-                      <div className={styles.averageCount}>
-                        <figure>
-                          <img src="/images/clock.png" alt="時計アイコン" />
-                        </figure>
-                        <h3>12回</h3>
-                      </div>
-                      <div className={styles.averageHour}>
-                        <figure>
-                          <img src="/images/sandClock.png" alt="砂時計アイコン" />
-                        </figure>
-                        <h3>6h</h3>
-                      </div>
+              <div className={styles.modalContent}>
+                <div className={styles.countAverage}>
+                  <p>過去1週間の平均セット回数</p>
+                  <div className={styles.averageTime}>
+                    <div className={styles.averageCount}>
+                      <figure>
+                        <img src="/images/clock.png" alt="時計アイコン" />
+                      </figure>
+                      <h3>12回</h3>
+                    </div>
+                    <div className={styles.averageHour}>
+                      <figure>
+                        <img src="/images/sandClock.png" alt="砂時計アイコン" />
+                      </figure>
+                      <h3>6h</h3>
                     </div>
                   </div>
-                  <div className={styles.countTotal}>
-                    <div className={styles.countFlex}>
-                      <p>過去3年の赤本合計点数</p>
-                      <div className={styles.deviation}>
-                        <p>偏差値</p>
-                        <p>63.3</p>
-                      </div>
-                    </div>
-                    <figure className={styles.countGraph}>
-                      <img src="/images/graph.png" alt="赤本グラフ" />
-                    </figure>
-                  </div>
-                  <button onClick={toggleModal}>OK</button>
                 </div>
-              )}
+                <div className={styles.countTotal}>
+                  <div className={styles.countFlex}>
+                    <p>過去3年の赤本合計点数</p>
+                    <div className={styles.deviation}>
+                      <p>偏差値</p>
+                      <p>63.3</p>
+                    </div>
+                  </div>
+                  <figure className={styles.countGraph}>
+                    <img src="/images/graph.png" alt="赤本グラフ" />
+                  </figure>
+                </div>
+                <button>OK</button>
+              </div>
             </div>
           </div>
           {/* 3位 */}

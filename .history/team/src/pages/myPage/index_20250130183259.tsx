@@ -220,10 +220,8 @@ export default function myPage() {
                 <p>日</p>
               </div>
             </div>
+            <div className={styles.countModal}></div>
           </a>
-          {/* <div className={styles.countModal}>
-            <h3>aaa</h3>
-          </div> */}
         </div>
         <footer className={styles.footerContent}>
             <div className={styles.footerCircle}></div>

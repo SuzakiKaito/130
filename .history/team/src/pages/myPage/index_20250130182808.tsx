@@ -221,9 +221,6 @@ export default function myPage() {
               </div>
             </div>
           </a>
-          {/* <div className={styles.countModal}>
-            <h3>aaa</h3>
-          </div> */}
         </div>
         <footer className={styles.footerContent}>
             <div className={styles.footerCircle}></div>

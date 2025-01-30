@@ -382,7 +382,6 @@
 }
 .countModal{
   position: fixed;
-  z-index: 990;
   bottom: 10%;
   right: 50%;
   transform: translate(-50%,-50%);
@@ -392,9 +391,7 @@
   border: 2px solid #fefefe;
   border-radius: 14px;
 }
-/* .countModal h3{
 
-} */
 
 .footerContent{
   width: 100%;

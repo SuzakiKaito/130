@@ -20,8 +20,6 @@ export default function ranking() {
   const toggleModal = (): void => {
     setIsModalOpen(!isModalOpen);
   };
-
-
   return (
     <>
       <div className={styles.content}>
@@ -135,7 +133,7 @@ export default function ranking() {
             </div>
             {/* 詳細 */}
             <div className={styles.detailContent}>
-              <button className={styles.detail} onClick={toggleModal}>詳細</button>
+              <button className={styles.detail}>詳細</button>
               <div className={styles.timeContent}>
                 <p className={styles.time}>14回</p>
                 <div className={styles.sandglass}>
@@ -179,7 +177,7 @@ export default function ranking() {
                       <img src="/images/graph.png" alt="赤本グラフ" />
                     </figure>
                   </div>
-                  <button onClick={toggleModal}>OK</button>
+                  <button>OK</button>
                 </div>
               )}
             </div>

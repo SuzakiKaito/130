@@ -179,7 +179,7 @@ export default function ranking() {
                       <img src="/images/graph.png" alt="赤本グラフ" />
                     </figure>
                   </div>
-                  <button onClick={toggleModal}>OK</button>
+                  <button>OK</button>
                 </div>
               )}
             </div>

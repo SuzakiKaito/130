@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React from "react";
 import styles from "@/styles/rank/index.module.css";
 // 矢印
 import { TbArrowBadgeRightFilled } from "react-icons/tb";
@@ -11,17 +11,7 @@ import { FaRegStar } from "react-icons/fa";
 import { CgSandClock } from "react-icons/cg";
 import { PiClockCountdownBold } from "react-icons/pi";
 // className={styles.}
-
-
 export default function ranking() {
-  
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
-
-  const toggleModal = (): void => {
-    setIsModalOpen(!isModalOpen);
-  };
-
-
   return (
     <>
       <div className={styles.content}>
@@ -135,7 +125,7 @@ export default function ranking() {
             </div>
             {/* 詳細 */}
             <div className={styles.detailContent}>
-              <button className={styles.detail} onClick={toggleModal}>詳細</button>
+              <button className={styles.detail}>詳細</button>
               <div className={styles.timeContent}>
                 <p className={styles.time}>14回</p>
                 <div className={styles.sandglass}>
@@ -179,7 +169,7 @@ export default function ranking() {
                       <img src="/images/graph.png" alt="赤本グラフ" />
                     </figure>
                   </div>
-                  <button onClick={toggleModal}>OK</button>
+                  <button>OK</button>
                 </div>
               )}
             </div>
