@@ -30,10 +30,10 @@ export default function Timer(): JSX.Element {
               setStarColor("yellow");
             }
             setMinutes(0);
-            setSeconds(5);
+            setSeconds(30);
           } else {
-            setMinutes(0);
-            setSeconds(10);
+            setMinutes(1);
+            setSeconds(0);
           }
           setIsOneMinuteCycle(!isOneMinuteCycle);
           setSetCount((prevCount) => prevCount + 1);
